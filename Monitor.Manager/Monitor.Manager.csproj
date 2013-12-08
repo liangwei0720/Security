@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{332407ED-ECFD-4A80-B5E4-DB589CE3EFD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Monitor.Manager</RootNamespace>
+    <AssemblyName>Monitor.Manager</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Monitor.Manager.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Monitor.Manager.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\AdminList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\AdminList.Designer.cs">
+      <DependentUpon>AdminList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSettingForm\AdminSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\AdminSave.Designer.cs">
+      <DependentUpon>AdminSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSettingForm\FacultiesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\FacultiesList.Designer.cs">
+      <DependentUpon>FacultiesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSettingForm\LogList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\LogList.Designer.cs">
+      <DependentUpon>LogList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSettingForm\SaveFaculties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\SaveFaculties.Designer.cs">
+      <DependentUpon>SaveFaculties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSettingForm\SaveImageInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\SaveImageInfo.Designer.cs">
+      <DependentUpon>SaveImageInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSettingForm\SaveServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\SaveServer.Designer.cs">
+      <DependentUpon>SaveServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSettingForm\SchoolSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\SchoolSetting.Designer.cs">
+      <DependentUpon>SchoolSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSettingForm\ScrollImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\ScrollImage.Designer.cs">
+      <DependentUpon>ScrollImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSettingForm\Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSettingForm\Server.Designer.cs">
+      <DependentUpon>Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonMethod.cs" />
+    <Compile Include="DormForm\DormAdminList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormForm\DormAdminList.Designer.cs">
+      <DependentUpon>DormAdminList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormForm\DormList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormForm\DormList.Designer.cs">
+      <DependentUpon>DormList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormForm\DormRoomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormForm\DormRoomList.Designer.cs">
+      <DependentUpon>DormRoomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormForm\ImportDorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormForm\ImportDorm.Designer.cs">
+      <DependentUpon>ImportDorm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormForm\SaveDorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormForm\SaveDorm.Designer.cs">
+      <DependentUpon>SaveDorm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormForm\SaveDormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormForm\SaveDormAdmin.Designer.cs">
+      <DependentUpon>SaveDormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormForm\SaveDormRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DormForm\SaveDormRoom.Designer.cs">
+      <DependentUpon>SaveDormRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMDIContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMDIContainer.Designer.cs">
+      <DependentUpon>FormMDIContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMessage.Designer.cs">
+      <DependentUpon>FrmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelForm\EditLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabelForm\EditLabel.Designer.cs">
+      <DependentUpon>EditLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelForm\LabelList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabelForm\LabelList.Designer.cs">
+      <DependentUpon>LabelList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelForm\LabelLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabelForm\LabelLocation.Designer.cs">
+      <DependentUpon>LabelLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelForm\SelectLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabelForm\SelectLabel.Designer.cs">
+      <DependentUpon>SelectLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Location\LocationOfLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Location\LocationOfLabel.Designer.cs">
+      <DependentUpon>LocationOfLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInfo.Designer.cs">
+      <DependentUpon>LogInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepealForm\RepealCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepealForm\RepealCard.Designer.cs">
+      <DependentUpon>RepealCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepealForm\RepealLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepealForm\RepealLabel.Designer.cs">
+      <DependentUpon>RepealLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportContent.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportContent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportInOut.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportInOut.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentForm\GoodsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm\GoodsList.Designer.cs">
+      <DependentUpon>GoodsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForm\ImportStudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm\ImportStudentInfo.Designer.cs">
+      <DependentUpon>ImportStudentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForm\SaveGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm\SaveGoods.Designer.cs">
+      <DependentUpon>SaveGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForm\SaveStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm\SaveStudent.Designer.cs">
+      <DependentUpon>SaveStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForm\SelectStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm\SelectStudent.Designer.cs">
+      <DependentUpon>SelectStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentForm\StudentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm\StudentList.Designer.cs">
+      <DependentUpon>StudentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UpdateInfoForm\GetInfoFromClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInfoForm\GetInfoFromClient.Designer.cs">
+      <DependentUpon>GetInfoFromClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInfoForm\UpdateDormToClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInfoForm\UpdateDormToClient.Designer.cs">
+      <DependentUpon>UpdateDormToClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInfoForm\UpdateInfoToClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInfoForm\UpdateInfoToClient.Designer.cs">
+      <DependentUpon>UpdateInfoToClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserTextBox.Designer.cs">
+      <DependentUpon>UserTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkStationForms\SaveWorkStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkStationForms\SaveWorkStation.Designer.cs">
+      <DependentUpon>SaveWorkStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkStationForms\WorkStationsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkStationForms\WorkStationsList.Designer.cs">
+      <DependentUpon>WorkStationsList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSettingForm\AdminList.resx">
+      <DependentUpon>AdminList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSettingForm\AdminSave.resx">
+      <DependentUpon>AdminSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSettingForm\FacultiesList.resx">
+      <DependentUpon>FacultiesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSettingForm\LogList.resx">
+      <DependentUpon>LogList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSettingForm\SaveFaculties.resx">
+      <DependentUpon>SaveFaculties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSettingForm\SaveImageInfo.resx">
+      <DependentUpon>SaveImageInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSettingForm\SaveServer.resx">
+      <DependentUpon>SaveServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSettingForm\SchoolSetting.resx">
+      <DependentUpon>SchoolSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSettingForm\ScrollImage.resx">
+      <DependentUpon>ScrollImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSettingForm\Server.resx">
+      <DependentUpon>Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormForm\DormAdminList.resx">
+      <DependentUpon>DormAdminList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormForm\DormList.resx">
+      <DependentUpon>DormList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormForm\DormRoomList.resx">
+      <DependentUpon>DormRoomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormForm\ImportDorm.resx">
+      <DependentUpon>ImportDorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormForm\SaveDorm.resx">
+      <DependentUpon>SaveDorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormForm\SaveDormAdmin.resx">
+      <DependentUpon>SaveDormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DormForm\SaveDormRoom.resx">
+      <DependentUpon>SaveDormRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMDIContainer.resx">
+      <DependentUpon>FormMDIContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMessage.resx">
+      <DependentUpon>FrmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelForm\EditLabel.resx">
+      <DependentUpon>EditLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelForm\LabelList.resx">
+      <DependentUpon>LabelList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelForm\LabelLocation.resx">
+      <DependentUpon>LabelLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelForm\SelectLabel.resx">
+      <DependentUpon>SelectLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\LocationOfLabel.resx">
+      <DependentUpon>LocationOfLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInfo.resx">
+      <DependentUpon>LogInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RepealForm\RepealCard.resx">
+      <DependentUpon>RepealCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepealForm\RepealLabel.resx">
+      <DependentUpon>RepealLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportContent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportContent.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportInOut.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportInOut.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm\GoodsList.resx">
+      <DependentUpon>GoodsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm\ImportStudentInfo.resx">
+      <DependentUpon>ImportStudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm\SaveGoods.resx">
+      <DependentUpon>SaveGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm\SaveStudent.resx">
+      <DependentUpon>SaveStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm\SelectStudent.resx">
+      <DependentUpon>SelectStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentForm\StudentList.resx">
+      <DependentUpon>StudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInfoForm\GetInfoFromClient.resx">
+      <DependentUpon>GetInfoFromClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInfoForm\UpdateDormToClient.resx">
+      <DependentUpon>UpdateDormToClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInfoForm\UpdateInfoToClient.resx">
+      <DependentUpon>UpdateInfoToClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTextBox.resx">
+      <DependentUpon>UserTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkStationForms\SaveWorkStation.resx">
+      <DependentUpon>SaveWorkStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkStationForms\WorkStationsList.resx">
+      <DependentUpon>WorkStationsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Monitor.Component\Monitor.Component\Monitor.Component.csproj">
+      <Project>{71D8E206-720A-4FCA-A7C0-96D325F142E2}</Project>
+      <Name>Monitor.Component</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\软件头标.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

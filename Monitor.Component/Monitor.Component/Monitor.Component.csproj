@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71D8E206-720A-4FCA-A7C0-96D325F142E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Monitor.Component</RootNamespace>
+    <AssemblyName>Monitor.Component</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Monitor.Component.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\..\3td party\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\..\3td party\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\3td party\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\..\3td party\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\..\..\3td party\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="NGUSoft.Framework.DataAccess">
+      <HintPath>..\..\3td party\NGUSoft.Framework.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\AdminManage.cs" />
+    <Compile Include="BLL\CardManager.cs" />
+    <Compile Include="BLL\ClassManager.cs" />
+    <Compile Include="BLL\DormAdminManager.cs" />
+    <Compile Include="BLL\DormManager.cs" />
+    <Compile Include="BLL\DormRoomManager.cs" />
+    <Compile Include="BLL\ErrorLogManage.cs" />
+    <Compile Include="BLL\FacultiesManager.cs" />
+    <Compile Include="BLL\GoodsManager.cs" />
+    <Compile Include="BLL\ImageInfoManager.cs" />
+    <Compile Include="BLL\InOutInfoManager.cs" />
+    <Compile Include="BLL\LabelManager.cs" />
+    <Compile Include="BLL\SchoolManager.cs" />
+    <Compile Include="BLL\ServerManager.cs" />
+    <Compile Include="BLL\StudentManager.cs" />
+    <Compile Include="BLL\T_MonitorHistoryManager.cs" />
+    <Compile Include="BLL\WorkStationsManager.cs" />
+    <Compile Include="DAL\AdminDAL.cs" />
+    <Compile Include="DAL\CardsData.cs" />
+    <Compile Include="DAL\ClassDAL.cs" />
+    <Compile Include="DAL\DormAdminsDAL.cs" />
+    <Compile Include="DAL\DormDAL.cs" />
+    <Compile Include="DAL\DormRoomsDAL.cs" />
+    <Compile Include="DAL\ErrorLogDAL.cs" />
+    <Compile Include="DAL\FacultiesDAL.cs" />
+    <Compile Include="DAL\GoodsDAL.cs" />
+    <Compile Include="DAL\ImageInfoDAL.cs" />
+    <Compile Include="DAL\InOutInfoDAL.cs" />
+    <Compile Include="DAL\LabelsDAL.cs" />
+    <Compile Include="DAL\SchoolsDAL.cs" />
+    <Compile Include="DAL\ServerDAL.cs" />
+    <Compile Include="DAL\StudentsDAL.cs" />
+    <Compile Include="DAL\T_MonitorHistoryData.cs" />
+    <Compile Include="DAL\WorkStationsDAL.cs" />
+    <Compile Include="DataBaseExecute.cs" />
+    <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\Cards.cs" />
+    <Compile Include="Model\Classes.cs" />
+    <Compile Include="Model\Dorm.cs" />
+    <Compile Include="Model\DormAdmins.cs" />
+    <Compile Include="Model\DormRooms.cs" />
+    <Compile Include="Model\ErrorLog.cs" />
+    <Compile Include="Model\Faculties.cs" />
+    <Compile Include="Model\Goods.cs" />
+    <Compile Include="Model\ImageInfo.cs" />
+    <Compile Include="Model\InOutInfo.cs" />
+    <Compile Include="Model\Labels.cs" />
+    <Compile Include="Model\Schools.cs" />
+    <Compile Include="Model\Server.cs" />
+    <Compile Include="Model\Students.cs" />
+    <Compile Include="Model\T_MonitorHistory.cs" />
+    <Compile Include="Model\WorkStations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticValue.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
