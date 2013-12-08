@@ -12,7 +12,7 @@ namespace Monitor.Component
     public class DataExecute
     {
         /// <summary>
-        /// 数据库操作对象
+        /// 数据库操作对象 
         /// </summary>
         protected DataManager dm = new DataManager ("ConnStr");
 
